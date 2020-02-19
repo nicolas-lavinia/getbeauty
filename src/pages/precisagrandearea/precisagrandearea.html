@@ -1,0 +1,51 @@
+<!--
+  Generated template for the PrecisagrandeareaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <span text-color="title_color">Buscando Artista</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  Que tipo de artista você está precisando?
+  
+  <ion-card *ngFor="let ga of form" >
+    <img src={{ga.img_grande_area}} (click)="openPage( ga.id, ga.grande_area )">
+  </ion-card>
+  <!-- <ion-card>
+    <img src='../../assets/imgs/babearia.jpg' (click)="openPage(2, 'babearia')">
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/manicure.jpeg' (click)="openPage(3, 'manicure')">
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/pedicure.jpeg' (click)="openPage(4, 'pedicure')">
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/estetica_facial.jpeg' (click)="openPage(5, 'estetica_facial')">
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/estetica_corporal.jpeg' (click)="openPage(6, 'estetica_corporal')">
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/depilacao.jpeg' >
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/massagem.jpeg' >
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/sobrancelhas.jpeg' >
+  </ion-card>
+  <ion-card>
+    <img src='../../assets/imgs/cirurgia_plastica.jpeg' >
+  </ion-card> -->
+</ion-content>

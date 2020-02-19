@@ -1,0 +1,65 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.toolbar-background {
+    background-color: rgb(21, 21, 25);
+  }
+
+  [text-color="title_color"] {
+    color: rgb(200, 155, 5);
+
+  // [text-color="title_color"] {
+  //   color: rgb(200, 155, 5);
+}
+
+.custom-button{
+  color: #cc9b09;
+  background-color: rgb(21, 21, 25);
+  font-weight: 400;
+}
+
+// :root {
+// --ion-color-bgColor: #1c1c1c;
+// --ion-color-bgColor-rgb: 28, 28, 28;
+// --ion-color-bgColor-contrast: #cc9b09;
+// --ion-color-bgColor-contrast-rgb: 204, 155, 9;
+// --ion-color-bgColor-shade: #414040;
+// --ion-color-bgColor-tint: #050404;
+// }
+
+// .ion-color-bgColor {
+// --ion-color-base: var(--ion-color-bgColor) !important;
+// --ion-color-base-rgb: var(--ion-color-bgColor-rgb) !important;
+// --ion-color-contrast: var(--ion-color-bgColor-contrast) !important;
+// --ion-color-contrast-rgb: var(--ion-color-bgColor-contrast-rgb) !important;
+// --ion-color-shade: var(--ion-color-bgColor-shade) !important;
+// --ion-color-tint: var(--ion-color-bgColor-tint) !important;
+// }
+
+h1{
+	margin:0;	
+	color:rgb(21, 21, 25);
+	font-size:1.5em;
+	line-height:1.1em;
+	padding:2.5rem 0 1rem 0;
+	text-transform: none;
+  font-weight: 400;
+	text-align: center;
+}
+// ion-card{
+//   width: 100% !important;
+// }

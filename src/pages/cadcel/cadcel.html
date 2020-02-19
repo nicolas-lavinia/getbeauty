@@ -1,0 +1,38 @@
+<!--
+  Generated template for the CadcelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span text-color="title_color">Cadastro - Celular</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>
+    {{this.txt_cadastro_cel}}
+  </h1>
+
+  <form (ngSubmit)="processCadastrarLogin()" [formGroup]="credentialsForm">
+    
+    <ion-item>
+      <ion-label color="primary" floating>Celular</ion-label>
+      <ion-input type="text" formControlName = "celular" [(ngModel)]="vj.dataform.celular"  [brmasker]="{phone: true}" ></ion-input>
+    </ion-item>
+    <ion-item class="no-line error" *ngIf="!credentialsForm.controls.celular.valid  && (credentialsForm.controls.celular.dirty || submitAttempt) && !credentialsForm.controls.celular.pending">
+        <p *ngIf="credentialsForm.value.celular != ''">Celular inválido</p>
+        <p *ngIf="credentialsForm.value.celular == ''">Preenchimento obrigatório</p>
+    </ion-item>
+    
+    <button ion-button color="dark" class="custom-button" type="submit" [disabled]="!credentialsForm.valid" block >Continuar</button>
+  
+  </form>
+
+  <button ion-button (click)="openPage(0)" >Cancelar</button>
+
+</ion-content>

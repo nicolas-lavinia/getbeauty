@@ -1,0 +1,36 @@
+<!--
+  Generated template for the CademailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <span text-color="title_color">Cadastro - Email</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="processCadastrarLogin()" [formGroup]="credentialsForm">
+      
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" formControlName = "email" [(ngModel)]="vj.dataform.email"  maxlength="60" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.email.valid  && (credentialsForm.controls.email.dirty || submitAttempt) && !credentialsForm.controls.email.pending">
+          <p *ngIf="credentialsForm.value.email != ''">Email inválido</p>
+          <p *ngIf="credentialsForm.value.email == ''">Preenchimento obrigatório</p>
+      </ion-item>
+
+      <button ion-button type="submit" [disabled]="!credentialsForm.valid" block >Continuar</button>
+    
+    </form>
+  
+    <button ion-button (click)="openPage(0)" >Cancelar</button>
+  
+  </ion-content>

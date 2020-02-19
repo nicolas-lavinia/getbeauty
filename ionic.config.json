@@ -1,0 +1,7 @@
+{
+  "name": "01_TabsPage",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

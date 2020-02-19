@@ -1,0 +1,33 @@
+<!--
+  Generated template for the CadprocatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton >
+    <ion-title>
+        <span text-color="title_color">Área de Atuaçào</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let categoria of lista_categorias" (click)="processCadastraAnuncioBasico(categoria.id_categoria_1);">
+      
+    <!--<button ion-item > -->
+      <ion-card-header>
+        <ion-card-title>{{ categoria.nome }}</ion-card-title>
+      </ion-card-header>
+    
+      <!-- <ion-card-content>
+          {{ categoria.descricao }}
+      </ion-card-content> -->
+    <!--</button>-->
+  </ion-card>
+
+</ion-content>

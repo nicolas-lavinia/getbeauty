@@ -1,0 +1,86 @@
+<!--
+  Generated template for the Cadastro1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>
+      <span text-color="title_color">Cadastro - Login</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+  
+  
+  <ion-content padding>
+    <form (ngSubmit)="processCadastrarLogin()" [formGroup]="credentialsForm">
+      
+      <ion-item>
+        <ion-label color="primary" floating>Nome completo</ion-label>
+        <ion-input type="text" formControlName = "nome" [(ngModel)]="vj.dataform.nome"  maxlength="200" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.nome.valid  && (credentialsForm.controls.nome.dirty || submitAttempt) && !credentialsForm.controls.nome.pending">
+          <p *ngIf="credentialsForm.value.nome != ''">Nome inválido</p>
+          <p *ngIf="credentialsForm.value.nome == ''">Preenchimento obrigatório</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>Celular</ion-label>
+        <ion-input type="text" formControlName = "celular" [(ngModel)]="vj.dataform.celular"  [brmasker]="{phone: true}" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.celular.valid  && (credentialsForm.controls.celular.dirty || submitAttempt) && !credentialsForm.controls.celular.pending">
+          <p *ngIf="credentialsForm.value.celular != ''">Celular inválido</p>
+          <p *ngIf="credentialsForm.value.celular == ''">Preenchimento obrigatório</p>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" formControlName = "email" [(ngModel)]="vj.dataform.email"  maxlength="60" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.email.valid  && (credentialsForm.controls.email.dirty || submitAttempt) && !credentialsForm.controls.email.pending">
+          <p *ngIf="credentialsForm.value.email != ''">Email inválido</p>
+          <p *ngIf="credentialsForm.value.email == ''">Preenchimento obrigatório</p>
+      </ion-item>
+      <!-- <ion-item class="no-line error" *ngIf="erro_cadastro1 != ''"> 
+          <p>{{ erro_cadastro1 }}</p>
+      </ion-item> -->
+<!--   
+      <ion-item>
+        <ion-label>Senha</ion-label>
+        <ion-input type="password" formControlName="senha" [(ngModel)]="vj.dataform.senha"  maxlength="16" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.senha.valid  && (credentialsForm.controls.senha.dirty || submitAttempt) && !credentialsForm.controls.senha.pending">
+          <p *ngIf="credentialsForm.value.senha != ''">Deve conter no mínimo 6 e no máximo 16 caracteres</p>
+          <p *ngIf="credentialsForm.value.senha == ''">Preenchimento obrigatório</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Confirme a senha</ion-label>
+        <ion-input type="password" formControlName="senha2" [(ngModel)]="vj.dataform.senha2"  maxlength="16" ></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="credentialsForm.value.senha != credentialsForm.value.senha2 && credentialsForm.value.senha2 != '' && (credentialsForm.controls.senha2.dirty  || submitRegisterAttempt) && !credentialsForm.controls.senha2.pending && credentialsForm.value.senha != '' && credentialsForm.controls.senha.valid">
+          <p>Confirmação de senha inválida</p>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="credentialsForm.value.senha2 == '' && (credentialsForm.controls.senha2.dirty  || submitRegisterAttempt) && !credentialsForm.controls.senha2.pending && credentialsForm.value.senha != '' && credentialsForm.controls.senha.valid">
+          <p>Preenchimento obrigatório</p>
+      </ion-item> -->
+  
+      <ion-item>
+        <ion-label color="primary" floating>CEP</ion-label>
+        <ion-input type="text" formControlName = "cep" [(ngModel)]="vj.dataform.cep"  maxlength="9" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+      </ion-item>
+      <ion-item class="no-line error" *ngIf="!credentialsForm.controls.cep.valid  && (credentialsForm.controls.cep.dirty || submitAttempt) && !credentialsForm.controls.cep.pending">
+          <p *ngIf="credentialsForm.value.cep != ''">CEP inválido</p>
+          <p *ngIf="credentialsForm.value.cep == ''">Preenchimento obrigatório</p>
+      </ion-item>
+
+      <button ion-button type="submit" [disabled]="!credentialsForm.valid" block >Continuar</button>
+    
+    </form>
+  
+    <button ion-button (click)="openPage(0)" >Cancelar</button>
+  
+  </ion-content>
+  
